@@ -1,0 +1,30 @@
+ALGORITHM produit_scalaire
+VAR
+    v1, v2 : ARRAY_OF INTEGER[n];
+    i, j, n : INTEGER
+BEGIN
+    write("Donner l'element ", i+1, "du vecteur v1")
+    read (v1[i])
+    write("Donner l'element ", j+1, "du vecteur v2")
+    read (v2[j])    
+    write ("Donner la taille des vecteurs  ")
+        read (n)  
+        prdt_sclr(v1, v2) 
+        IF (ps==0) THEN
+        ("les deux vecteurs sont orthogonaux")    
+        END_IF
+END
+FUNCTION prdt_sclr(v1, v2:INTEGER) : INTEGER
+VAR
+    i,j : INTEGER
+    ps: INTEGER
+BEGIN
+    ps := 0
+    FOR i FROM 0 TO v1.length 
+        FOR j FROM 0 TO v2.length 
+            ps := v1[i]*v2[j]
+        END_FOR
+    END_FOR
+    RETURN ps;
+END
+    
