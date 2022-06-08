@@ -3,12 +3,16 @@ VAR
     v1, v2 : ARRAY_OF INTEGER[n];
     i, j, n : INTEGER
 BEGIN
-    write("Donner l'element ", i+1, "du vecteur v1")
-    read (v1[i])
-    write("Donner l'element ", j+1, "du vecteur v2")
-    read (v2[j])    
     write ("Donner la taille des vecteurs  ")
-        read (n)  
+    read (n)
+    FOR i FROM 0 TO v1.length step 1 do
+    write("Donner l'element ", i, "du vecteur v1")
+    read (v1[i])
+    END_FOR
+    FOR i FROM 0 TO v2.length step 1 do
+    write("Donner l'element ", j, "du vecteur v2")
+    read (v2[j])  
+    END_FOR 
         prdt_sclr(v1, v2) 
         IF (ps==0) THEN
         ("les deux vecteurs sont orthogonaux")    
