@@ -9,7 +9,7 @@ BEGIN
     write("Donner l'element ", i, "du vecteur v1")
     read (v1[i])
     END_FOR
-    FOR i FROM 0 TO v2.length step 1 do
+    FOR j FROM 0 TO v2.length step 1 do
     write("Donner l'element ", j, "du vecteur v2")
     read (v2[j])  
     END_FOR 
